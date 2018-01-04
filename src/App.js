@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as firebase from 'firebase';
 import reducers from './reducers';
+import LoginForm from './components/LoginForm';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBCxENjuOI9x8GJj6g20EjInjAGWJPSTI4',
@@ -16,17 +17,12 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-
 export default class App extends Component {
   render() {
     return (
       <Provider store={createStore(reducers)}>
-        <View>
-          <Text>
-            Manager
-          </Text>
-      </View>
-    </Provider>
+        <LoginForm />
+      </Provider>
     );
   }
 }
