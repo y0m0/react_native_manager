@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import * as firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
-import LoginForm from './components/LoginForm';
+import Router from './Router';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBCxENjuOI9x8GJj6g20EjInjAGWJPSTI4',
@@ -22,7 +22,7 @@ export default class App extends Component {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
     return (
       <Provider store={store}>
-        <LoginForm />
+        <Router />
       </Provider>
     );
   }
