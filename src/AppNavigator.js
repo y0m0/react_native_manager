@@ -2,7 +2,7 @@ import { StackNavigator } from 'react-navigation';
 import LoginForm from './components/LoginForm';
 import EmployeeList from './components/EmployeeList';
 
-const Router = StackNavigator({
+const AppNavigator = StackNavigator({
   login: {
     screen: LoginForm,
     navigationOptions: {
@@ -19,4 +19,4 @@ const Router = StackNavigator({
   initialRouteName: 'login',
 });
 
-export default Router;
+export default AppNavigator;
