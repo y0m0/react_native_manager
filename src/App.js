@@ -6,7 +6,7 @@ import ReduxThunk from 'redux-thunk';
 import { addNavigationHelpers } from 'react-navigation';
 
 import reducers from './reducers';
-import AppNavigator from './AppNavigator';
+import AppNavigator from './navigation/AppNavigator';
 
 class App extends Component {
   componentWillMount() {

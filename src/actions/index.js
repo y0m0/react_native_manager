@@ -42,11 +42,24 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
 
-  dispatch(NavigationActions.navigate({ routeName: 'employeeList' }));
+  dispatch(resetNavigation('employeeList'));
 };
 
 const loginUserFail = (dispatch) => {
   dispatch({
     type: LOGIN_USER_FAIL
   });
+};
+
+// this function is used in addition with hiding the
+// navigation back button in the headerto clean the 
+// navigation stack, in order to disable the android
+// back button functionality
+const resetNavigation = (route) => {
+  return (
+  NavigationActions.reset({
+    index: 0,
+    actions: [NavigationActions.navigate({ routeName: route })]
+  })
+  );
 };
