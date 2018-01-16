@@ -1,9 +1,7 @@
-import React from 'react';
-import { Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import LoginForm from '../components/LoginForm';
-import EmployeeList from '../components/EmployeeList';
+import EmployeeNavigator from './EmployeeNavigator';
 
 const AppNavigator = StackNavigator({
   login: {
@@ -12,14 +10,7 @@ const AppNavigator = StackNavigator({
       title: 'Please Login'
     }
   },
-  employeeList: {
-    screen: EmployeeList,
-    navigationOptions: {
-      headerTitle: 'Employee List',
-      headerLeft: null,
-      headerRight: <Button title="Add" onPress={() => console.log('press')} />
-    }
-  }
+  employeeNavigator: { screen: EmployeeNavigator }
 }, {
   initialRouteName: 'login',
 });

@@ -42,7 +42,7 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
 
-  dispatch(resetNavigation('employeeList'));
+  dispatch(resetNavigation('employeeNavigator'));
 };
 
 const loginUserFail = (dispatch) => {
