@@ -11,4 +11,8 @@ class EmployeeCreate extends Component {
   }
 }
 
+EmployeeCreate.navigationOptions = {
+  title: 'Create Employee'
+};
+
 export default EmployeeCreate;

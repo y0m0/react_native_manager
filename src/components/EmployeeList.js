@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 class EmployeeList extends Component {
   render() {
@@ -15,5 +15,16 @@ class EmployeeList extends Component {
     );
   }
 }
+
+EmployeeList.navigationOptions = ({ navigation }) => {
+  return {
+    title: 'Employee List',
+    headerLeft: null,
+    headerRight: <Button
+      title="Add"
+      onPress={() => navigation.navigate('employeeCreate')}
+    />
+  };
+};
 
 export default EmployeeList;

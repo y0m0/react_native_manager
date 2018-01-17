@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
+
 import { emailChanged, passwordChanged, loginUser } from '../actions';
 import { Card, CardSection, Input, Button, Spinner } from './common';
 
@@ -81,6 +82,10 @@ const styles = {
     alignSelf: 'center',
     color: 'red'
   }
+};
+
+LoginForm.navigationOptions = {
+  title: 'Please Login'
 };
 
 const mapStateToProps = (state) => {
