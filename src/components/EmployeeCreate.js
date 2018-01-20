@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 class EmployeeCreate extends Component {
   render() {
@@ -11,8 +11,11 @@ class EmployeeCreate extends Component {
   }
 }
 
-EmployeeCreate.navigationOptions = {
-  title: 'Create Employee'
+EmployeeCreate.navigationOptions = ({ navigation }) => {
+  return {
+    title: 'Create Employee',
+    headerLeft: <Button title="Back" onPress={() => navigation.goBack()} />
+  };
 };
 
 export default EmployeeCreate;

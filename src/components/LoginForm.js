@@ -85,7 +85,7 @@ const styles = {
 };
 
 LoginForm.navigationOptions = {
-  title: 'Please Login'
+  title: 'Please Login',
 };
 
 const mapStateToProps = (state) => {
